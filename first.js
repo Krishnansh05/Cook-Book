@@ -15,7 +15,7 @@ const sampleRecipe = {
 
     ingredients: "1 package of dry spaghetti, 8 tablespoons butter, 2 tablespoons minced garlic, 1 tablespoon chopped fresh parsley, Salt and freshly ground black pepper to taste and 1 cup grated Parmesan cheese.",
 
-    procedure: "Step 1. Cook the spaghetti. Step 2. Melt butter with garlic very slowly to avoid burning the garlic. Step 3. Season with parsley, salt, black pepper, and cayenne. Step 4. Combine everything. Step 5. Serve with grated Parmesan cheese.",
+    procedure: "Step 1. Cook the spaghetti. Step 2. Melt butter with garlic very slowly to avoid burning the garlic. Step 3. Season with parsley, salt, black pepper, and cayenne. Step 4. Mix everything. Step 5. Serve with grated Parmesan cheese.",
 
     timeTaken: "Prep Time - 15mins, Cook Time - 25mins, Total Time - 40mins.",
 
