@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0bcfffb017.js" crossorigin="anonymous"></script>
+    <title>Cook Book</title>
+    <link rel="shortcut icon" type="x-icon" href="./images/Frying Pan.jpeg">
+</head>
+<body>
+    <!-- ..............Header Section.............. -->
+    <header>
+        <div class="container">
+            <h1 class="logo"><span>COOK</span> <br> BOOK</h1>
+            <nav>
+                <div class="menu"><i class="fa-solid fa-bars" onclick="openMenu()"></i></div>
+                <ul class="nav-tabs" id="sidemenu">
+                    <li><a href="#main">Home</a></li>
+                    <li><a href="#recipes-section">Featured</a></li>
+                    <li><a href="form.html" target="_blank">Add Recipes</a></li>
+                    <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- ..............Home Section.............. -->
+    <div id="main">
+        <div class="content">
+            <h2>Ready to spice things up?</h2>
+            <p>Discover mouth watering <span>recipes</span> and how-to's based on the food you love.</p>
+            <form action="#" class="search-box">
+                <input type="text" id="searchitem" placeholder="Search Recipes" autocomplete="off" onkeyup="search()">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ..............Recipes Section.............. -->
+    <div id="recipes-section">
+        <h1>Featured Recipes</h1>
+        <div class="all-recipes" id="all-recipes">
+            <div class="recipe-tabs">
+                <img src="./images/Pasta Recipe/IMG-20240527-WA0015.jpg">
+                <h2>Pasta</h2>
+                <p>Trendy pasta recipes may come and
+                     go, but the delicious Pasta and 
+                     fresh and unique explications of it
+                     endure forever.</p>
+                <a href="recipe1.html" target="_blank">View Full Recipe</a>
+            </div>
+            <div class="recipe-tabs">
+                <img src="./images/Butter Chicken/IMG-20240527-WA0023.jpg">
+                <h2>Butter Chicken</h2>
+                <p>Butter Chicken is a flavor-packed,
+                    creamy, and delicious
+                    dish that tastes better than most
+                     your favorite Indian platters.
+                    </p>
+                <a href="recipe2.html" target="_blank">View Full Recipe</a>
+            </div>
+            <div class="recipe-tabs">
+                <img src="./images/Sushi/IMG-20240527-WA0030.jpg">
+                <h2>Sushi</h2>
+                <p>Sushi Rolls or Uramaki Rolls 
+                    are rolls filled with rice on the 
+                    outside, nori in the middle, and 
+                    delicious fillings on the inside.
+                </p>
+                <a href="recipe3.html" target="_blank">View Full Recipe</a>
+            </div>
+            <div class="recipe-tabs">
+                <img src="./images/Croissant Recipe/IMG-20240527-WA0014.jpg">
+                <h2>French Croissant</h2>
+                <p>Croissant has lovely layers,
+                     a crispy exterior, and a soft,
+                     buttery interior which is a delight that melts
+                     cheeks almost instantly.</p>
+                <a href="recipe4.html" target="_blank">View Full Recipe</a>
+            </div>
+            <div class="recipe-tabs">
+                <img src="./images/Hot Chocolate/IMG-20240528-WA0019.jpg">
+                <h2>Hot Chocolate</h2>
+                <p>This tempting Hot Chocolate is extremely comforting
+                     on dreary days, makes
+                    the kitchen smell wonderful and 
+                     nourishes the soul.</p>
+                <a href="recipe5.html" target="_blank">View Full Recipe</a>
+            </div>
+        </div>
+    </div>
+    <!-- ..............Footer Section.............. -->
+    
+    <footer>
+        <div>
+            <p>Copyright © 2024 Krishnansh Gupta. Created and Edited by Krishnansh Gupta.</p>
+        </div>
+    </footer>
+<script>
+    const search = () =>{
+    const searchbox = document.getElementById("searchitem").value.toUpperCase();
+    const storeitems = document.getElementById("all-recipes")
+    const item = document.querySelectorAll(".recipe-tabs")
+    const itemname = document.getElementsByTagName("h2")
+
+    for(var i=0; i<itemname.length;i++)
+    {
+        let match = item[i].getElementsByTagName('h2')[0];
+
+        if(match)
+        {
+            let textvalue = match.textContent || match.innerHTML
+
+                if(textvalue.toUpperCase().indexOf(searchbox) >-1){
+                    item[i].style.display = "";
+                }
+
+                else{
+                    item[i].style.display = "none";   
+                }
+        }
+    }
+}
+</script>
+
+<script>
+    var sideMenu = document.getElementById("sidemenu");
+
+    function openMenu() {
+        sideMenu.style.right = "0";
+    }
+
+    function closeMenu() {
+        sideMenu.style.right = "-200px";
+    }
+</script>
+</body>
+</html>

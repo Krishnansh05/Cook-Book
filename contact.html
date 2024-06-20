@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CookBook</title>
+    <link rel="shortcut icon" type="x-icon" href="./images/Frying Pan.jpeg">
+    <link rel="stylesheet" href="contactstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0bcfffb017.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <main>
+        <section id="contact-info">
+            <h2>Get in Touch!</h2>
+            <p>We would love to hear from you! Whether you have a question about recipes, want to share your feedback, or simply say hello!, feel free to reach out.</p>
+            <div id="contact-details">
+                <div class="contact-detail">
+                    <h3>Email</h3>
+                    <p>krishnanshg2005@gmail.com</p>
+                </div>
+                <div class="contact-detail">
+                    <h3>Phone</h3>
+                    <p>+91 7275298901</p>
+                </div>
+                <div class="contact-detail">
+                    <h3>Social Media Links</h3>
+                    <p> <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a> <a href="https://in.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a> 
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a> <a href="https://www.google.com/gmail/about/"><i class="fa-regular fa-envelope"></i> </a> </p>
+                </div>
+            </div>
+        </section>
+        <section id="contact-form">
+            <h2>Contact Form</h2>
+            <form id="form" name="submit-to-google-sheet">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="Name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="Message" rows="5" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <script src="cont.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyUveQc0CfgJQeJ6QtCETwrkODseAxkrgf9B2yOtqc_EdvoBtf3IxkKvDM4jY61E_vB/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>

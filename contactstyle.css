@@ -1,0 +1,132 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: url(./images/contact-background.jpeg);
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+}
+
+header h1 {
+    font-family: 'Lora', serif;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-info, #contact-form {
+    margin-bottom: 2em;
+}
+
+h2 {
+    color: #6ea41e;
+    border-bottom: 2px solid #FDA403;
+    padding-bottom: 0.5em;
+    font-family: 'Lora', serif;
+}
+
+#contact-info p {
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+#contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.contact-detail {
+    flex: 1 1 30%;
+    background-color: #f8f8f8;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-detail h3 {
+    margin-top: 0;
+    color: #FDA403;
+}
+
+.contact-detail a{
+    text-decoration: none;
+    margin: 10px 0;
+    margin-left: 10px;
+    font-size: 40px;
+    color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1em;
+    color: #6ea41e;
+}
+
+input, textarea, button {
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #FDA403;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+button:hover {
+    background-color: #e59402;
+}
+
+@media (max-width: 768px) {
+    #contact-details {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 1em;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    form label {
+        margin-top: 0.5em;
+    }
+
+    input, textarea, button {
+        margin-top: 0.5em;
+    }
+}

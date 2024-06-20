@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: #f8f8f8;
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ..............Header Section.............. */
+
+header{
+    opacity: 0.9;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background: #222121;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+/* ..............Home Section.............. */
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-tabs{
+    display: none;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+    font-weight: 550;
+    font-size: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background:#FDA403;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.logo{
+    font-size: 30px;
+}
+
+#main{
+    width: 100%;
+    background: url(./images/main-background.jpg);
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 140px 0;
+    margin-bottom: 20px;
+}
+
+#main h2{
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+#main p{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.search-box{
+
+    max-width: 550px;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box input{
+    width: 70%;
+    padding: 10px;
+    outline: none;
+    border: 0;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+    border: 1px solid rgb(111, 164, 30);
+}
+
+.search-box button{
+    padding: 10px 20px;
+    outline: none;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    font-size: 1rem;
+    background: #6ea41e;
+    color: #fff;
+    cursor: pointer;
+}
+
+span{
+    color: #FDA403;
+}
+
+/* ..............Recipe Section.............. */
+
+#recipes-section{
+    padding: 50px 0;
+}
+
+#recipes-section h1{
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 550;
+}
+
+.all-recipes{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 15px;
+}
+
+.recipe-tabs{
+    background: #fff;
+    margin: 30px 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-tabs img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-tabs h2{
+    font-size: 22px;
+    padding: 20px;
+}
+
+.recipe-tabs p{
+    font-size: 18px;
+    padding: 15px;
+}
+
+.recipe-tabs a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #333;
+    color: #fff;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.recipe-tabs a:hover{
+
+    background: #181818;
+}
+
+/* ..............Footer Section.............. */
+
+footer{
+    background: #333;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+/* ..............Media Queries Section.............. */
+
+.menu{
+    font-size: 30px;
+    padding: 20px;
+    text-align: right;
+    cursor: pointer;
+    display: block;
+}
+
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (min-width:768px){
+
+    .menu{
+        display: none;
+    }
+
+    .nav-tabs{
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width:768px){
+
+    #main h2{
+        font-size: 34px;
+    }
+
+    #main p{
+        font-size: 17px;
+    }
+
+    .logo{
+        font-size: 20px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav .fa-solid{
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    #sidemenu {
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        padding-top: 50px;
+        height: 100vh;
+        background:#FDA403;
+        display: flex;
+        /* opacity: 1.1; */
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+        transition: right 0.3s ease;
+    }
+
+    #sidemenu ul {
+        flex-direction: column;
+    }
+
+    #sidemenu ul li {
+        margin: 20px 0;
+    }
+
+    .fa-xmark {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+}

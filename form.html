@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Recipe</title>
+    <link rel="stylesheet" href="formstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="x-icon" href="./images/Frying Pan.jpeg">
+</head>
+<body>
+    <header>
+        <h1>What's on your mind today?</h1>
+    </header>
+    <main>
+        <section id="add-recipe">
+            <form id="recipe-form">
+                <label for="recipe-name">Recipe Name:</label>
+                <input type="text" id="recipe-name" placeholder="Enter the name of the Recipe" required>
+                
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" placeholder="Enter the ingredients. Ex - Eggs, salt, butter,etc." required></textarea>
+                
+                <label for="procedure">Procedure:</label>
+                <textarea id="procedure" placeholder="Enter the directions. Ex - Step 1. Take water in a pot, Step 2. ..., etc."     required></textarea>
+                
+                <label for="time-taken">Time Taken:</label>
+                <input type="text" id="time-taken" placeholder="Enter the time taken. Ex - 1hrs 23mins"  required>
+                
+                <label for="utensils-used">Utensils Used:</label>
+                <input type="text" id="utensils-used" placeholder="Enter the utensils used. Ex - Pot, Bowl, Spoons, Spatula, etc."  required>
+                
+                <label for="recipe-image">Recipe Image:</label>
+                <input type="file" id="recipe-image" accept="image/*" required>
+                
+                <button type="submit">Add Recipe</button>
+            </form>
+        </section>
+        <section id="recipe-list">
+            <h2>Recipe List</h2>
+            <div id="recipes"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
