@@ -20,7 +20,7 @@ const sampleRecipe = {
     timeTaken: "Prep Time - 40mins, Cook Time - 35mins, Total Time - 1hr 15mins.",
 
 
-    utensilsUsed: "Medium Pot, Small bowl, Spoons and saptula, Baking tray, Bamboo sushi mat, Sharp knife, etc.",
+    utensilsUsed: "Medium Pot, Small bowl, Spoons and spatula, Baking dish, Bamboo sushi mat, Sharp knife, etc.",
 
 
     imageUrl: "./images/Sushi/IMG-20240527-WA0028.jpg"
